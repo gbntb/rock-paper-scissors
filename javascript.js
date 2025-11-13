@@ -24,6 +24,13 @@ function playGame() {
     let computerScore = 0;
     let humanScore = 0;
 
+    const buttons = document.querySelectorAll("#buttons button");
+    buttons.forEach((button) => {
+        button.addEventListener("click", (e) => {
+            playRound(e.target.id, getComputerChoice());
+        });
+    });
+
     const messages = document.querySelector("#messages");
 
 
@@ -68,14 +75,15 @@ function playGame() {
                     messages.textContent = `It's a tie! You both played scissors! / You: ${humanScore}, CPU: ${computerScore}`;
             }
         }
-    }
 
-    const buttons = document.querySelectorAll("#buttons button");
-    buttons.forEach((button) => {
-        button.addEventListener("click", (e) => {
-            playRound(e.target.id, getComputerChoice());
-        });
-    });
+        if (humanScore >= 5 || computerScore >= 5) {
+            buttons.forEach((button) => {
+                button.disabled = true;
+            });
+             
+            messages.textContent = `${humanScore > computerScore ? "You win!" : "You lose!"} / You: ${humanScore} - CPU: ${computerScore}`;
+        }
+    }
 }
 
 playGame();
