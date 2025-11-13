@@ -34,35 +34,35 @@ function playGame() {
                     messages.textContent = `It's a tie! You both played rock! / You: ${humanScore}, CPU: ${computerScore}`;
                     break;
                 case "paper":
-                    messages.textContent = `You lose! Paper beats rock! / You: ${humanScore}, CPU: ${computerScore}`;
                     computerScore++;
+                    messages.textContent = `You lose! Paper beats rock! / You: ${humanScore}, CPU: ${computerScore}`;
                     break;
                 case "scissors":
-                    messages.textContent = `You win! Rock beats scissors! / You: ${humanScore}, CPU: ${computerScore}`;
                     humanScore++;
+                    messages.textContent = `You win! Rock beats scissors! / You: ${humanScore}, CPU: ${computerScore}`;
             }
         } else if (humanChoice === "paper") {
             switch (computerChoice) {
                 case "rock":
-                    messages.textContent = `You win! Paper beats rock! / You: ${humanScore}, CPU: ${computerScore}`;
                     humanScore++;
+                    messages.textContent = `You win! Paper beats rock! / You: ${humanScore}, CPU: ${computerScore}`;
                     break;
                 case "paper":
                     messages.textContent = `It's a tie! You both played paper! / You: ${humanScore}, CPU: ${computerScore}`;
                     break;
                 case "scissors":
-                    messages.textContent = `You lose! Scissors beats paper! / You: ${humanScore}, CPU: ${computerScore}`;
                     computerScore++;
+                    messages.textContent = `You lose! Scissors beats paper! / You: ${humanScore}, CPU: ${computerScore}`;
             }
         } else if (humanChoice === "scissors") {
             switch (computerChoice) {
                 case "rock":
-                    messages.textContent = `You lose! Rock beats scissors! / You: ${humanScore}, CPU: ${computerScore}`;
                     computerScore++;
+                    messages.textContent = `You lose! Rock beats scissors! / You: ${humanScore}, CPU: ${computerScore}`;
                     break;
                 case "paper":
-                    messages.textContent = `You win! Scissors beats paper! / You: ${humanScore}, CPU: ${computerScore}`;
                     humanScore++;
+                    messages.textContent = `You win! Scissors beats paper! / You: ${humanScore}, CPU: ${computerScore}`;
                     break;
                 case "scissors":
                     messages.textContent = `It's a tie! You both played scissors! / You: ${humanScore}, CPU: ${computerScore}`;
