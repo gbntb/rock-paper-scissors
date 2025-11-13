@@ -66,14 +66,6 @@ function playGame() {
             }
         }
     }
-
-    playRound(getHumanChoice(), getComputerChoice());
-    playRound(getHumanChoice(), getComputerChoice());
-    playRound(getHumanChoice(), getComputerChoice());
-    playRound(getHumanChoice(), getComputerChoice());
-    playRound(getHumanChoice(), getComputerChoice());
-
-    console.log(`Game is over! Final scores -> You: ${humanScore}, Computer: ${computerScore}.`);
 }
 
 playGame();
