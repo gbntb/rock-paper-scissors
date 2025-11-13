@@ -24,45 +24,48 @@ function playGame() {
     let computerScore = 0;
     let humanScore = 0;
 
+    const messages = document.querySelector("#messages");
+
+
     function playRound(humanChoice, computerChoice) {
         if (humanChoice === "rock") {
             switch (computerChoice) {
                 case "rock":
-                    console.log("It's a tie! You both played rock!");
+                    messages.textContent = `It's a tie! You both played rock! / You: ${humanScore}, CPU: ${computerScore}`;
                     break;
                 case "paper":
-                    console.log("You lose! Paper beats rock!");
+                    messages.textContent = `You lose! Paper beats rock! / You: ${humanScore}, CPU: ${computerScore}`;
                     computerScore++;
                     break;
                 case "scissors":
-                    console.log("You win! Rock beats scissors!");
+                    messages.textContent = `You win! Rock beats scissors! / You: ${humanScore}, CPU: ${computerScore}`;
                     humanScore++;
             }
         } else if (humanChoice === "paper") {
             switch (computerChoice) {
                 case "rock":
-                    console.log("You win! Paper beats rock!");
+                    messages.textContent = `You win! Paper beats rock! / You: ${humanScore}, CPU: ${computerScore}`;
                     humanScore++;
                     break;
                 case "paper":
-                    console.log("It's a tie! You both played paper!");
+                    messages.textContent = `It's a tie! You both played paper! / You: ${humanScore}, CPU: ${computerScore}`;
                     break;
                 case "scissors":
-                    console.log("You lose! Scissors beats paper!");
+                    messages.textContent = `You lose! Scissors beats paper! / You: ${humanScore}, CPU: ${computerScore}`;
                     computerScore++;
             }
         } else if (humanChoice === "scissors") {
             switch (computerChoice) {
                 case "rock":
-                    console.log("You lose! Rock beats scissors!");
+                    messages.textContent = `You lose! Rock beats scissors! / You: ${humanScore}, CPU: ${computerScore}`;
                     computerScore++;
                     break;
                 case "paper":
-                    console.log("You win! Scissors beats paper!");
+                    messages.textContent = `You win! Scissors beats paper! / You: ${humanScore}, CPU: ${computerScore}`;
                     humanScore++;
                     break;
                 case "scissors":
-                    console.log("It's a tie! You both played scissors!");
+                    messages.textContent = `It's a tie! You both played scissors! / You: ${humanScore}, CPU: ${computerScore}`;
             }
         }
     }
