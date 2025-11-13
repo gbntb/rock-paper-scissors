@@ -66,6 +66,13 @@ function playGame() {
             }
         }
     }
+
+    const buttons = document.querySelectorAll("#buttons button");
+    buttons.forEach((button) => {
+        button.addEventListener("click", (e) => {
+            playRound(e.target.id, getComputerChoice());
+        });
+    });
 }
 
 playGame();
